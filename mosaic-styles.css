@@ -231,7 +231,7 @@ a { color: inherit; text-decoration: none; }
 /* =========================================================================
    SOLUTIONS — expanding rows
    ========================================================================= */
-.solutions { padding-bottom: 90px; }
+.solutions { padding-bottom: 48px; }
 .sol-intro {
   font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.6rem); line-height: 1.26; letter-spacing: -0.01em;
   max-width: 24ch; margin: 0 0 48px;
