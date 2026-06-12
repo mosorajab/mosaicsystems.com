@@ -59,14 +59,14 @@ a { color: inherit; text-decoration: none; }
   transform-origin: center; 
 }
 .mark i.ax { background: var(--accent); }
-/* geometry as % of the 120 grid: L=47.5%, gap 5%, sub 22.08% */
-.mark i.q1 { left: 0;      top: 0;      width: 47.5%; height: 47.5%; }
-.mark i.q2 { left: 52.5%;  top: 0;      width: 47.5%; height: 47.5%; }
-.mark i.q3 { left: 0;      top: 52.5%;  width: 47.5%; height: 47.5%; }
-.mark i.s1 { left: 52.5%;  top: 52.5%;  width: 22.08%; height: 22.08%; }
-.mark i.s2 { left: 77.92%; top: 52.5%;  width: 22.08%; height: 22.08%; }
-.mark i.s3 { left: 52.5%;  top: 77.92%; width: 22.08%; height: 22.08%; }
-.mark i.s4 { left: 77.92%; top: 77.92%; width: 22.08%; height: 22.08%; }
+/* geometry — Keystone (asymmetric subdivision): big block + spiralling tiles */
+.mark i.q1 { left: 0;       top: 0;       width: 58.33%; height: 58.33%; }
+.mark i.q2 { left: 63.33%;  top: 0;       width: 36.67%; height: 58.33%; }
+.mark i.q3 { left: 0;       top: 63.33%;  width: 58.33%; height: 36.67%; }
+.mark i.s1 { left: 63.33%;  top: 63.33%;  width: 16.67%; height: 16.67%; }
+.mark i.s2 { left: 83.33%;  top: 63.33%;  width: 16.67%; height: 16.67%; }
+.mark i.s3 { left: 63.33%;  top: 83.33%;  width: 16.67%; height: 16.67%; }
+.mark i.s4 { left: 83.33%;  top: 83.33%;  width: 16.67%; height: 16.67%; }
 .mark.rev i { background: var(--paper); }
 .mark.rev i.ax { background: var(--accent-2); }
 
@@ -90,9 +90,17 @@ a { color: inherit; text-decoration: none; }
 .mark.hoverable { cursor: pointer; }
 .mark.hoverable i { transition: transform .5s var(--ease), background .4s ease; }
 .mark.hoverable:hover i.q1 { transform: translate(-4%, -4%); }
-.mark.hoverable:hover i.q2 { transform: translate(4%, -4%); }
-.mark.hoverable:hover i.q3 { transform: translate(-4%, 4%); }
-.mark.hoverable:hover i.s4 { transform: scale(1.12); }
+.mark.hoverable:hover i.q2 { transform: translate(5%, -3%); }
+.mark.hoverable:hover i.q3 { transform: translate(-3%, 5%); }
+.mark.hoverable:hover i.s4 { transform: scale(1.15); }
+
+/* ---- scroll progress --------------------------------------------------- */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 2px; width: 100%;
+  transform: scaleX(0); transform-origin: 0 50%;
+  background: var(--accent); z-index: 100; pointer-events: none;
+  will-change: transform;
+}
 
 /* =========================================================================
    NAV

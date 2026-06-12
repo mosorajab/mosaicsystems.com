@@ -7,7 +7,16 @@
 
   /* ---- nav scrolled state -------------------------------------------- */
   var nav = document.getElementById("nav");
-  function onScroll() { nav.classList.toggle("scrolled", window.scrollY > 12); }
+  var prog = document.getElementById("progress");
+  function onScroll() {
+    nav.classList.toggle("scrolled", window.scrollY > 12);
+    if (prog) {
+      var doc = document.documentElement;
+      var scrolled = window.scrollY;
+      var total = doc.scrollHeight - doc.clientHeight;
+      prog.style.transform = "scaleX(" + (total > 0 ? scrolled / total : 0) + ")";
+    }
+  }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 

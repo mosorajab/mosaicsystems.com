@@ -9,8 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="mosaic-styles.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23221f1a'/%3E%3Cg%3E%3Crect x='14' y='14' width='44' height='44' fill='%23f6f1e7'/%3E%3Crect x='62' y='14' width='28' height='44' fill='%23f6f1e7'/%3E%3Crect x='14' y='62' width='44' height='28' fill='%23f6f1e7'/%3E%3Crect x='62' y='62' width='13' height='13' fill='%23f6f1e7'/%3E%3Crect x='79' y='62' width='13' height='13' fill='%23f6f1e7'/%3E%3Crect x='62' y='79' width='13' height='13' fill='%23f6f1e7'/%3E%3Crect x='79' y='79' width='13' height='13' fill='%23c8604f'/%3E%3C/g%3E%3C/svg%3E" />
 </head>
 <body>
+
+<div class="scroll-progress" id="progress" aria-hidden="true"></div>
 
 <!-- ============================ NAV ============================ -->
 <nav class="nav" id="nav">
@@ -37,7 +40,7 @@
       <div class="hero-eyebrow">
         <span class="dot" aria-hidden="true"></span>
         <span class="mono-label">Mosaic Systems</span>
-        <span class="mono-label" style="color:var(--ink-3)">/ Technology Company · Est. 2024</span>
+        <span class="mono-label" style="color:var(--ink-3)">/ TECHNOLOGY COMPANY · EST. 2025</span>
       </div>
 
       <div class="hero-top">
@@ -45,7 +48,7 @@
           <i class="q1"></i><i class="q2"></i><i class="q3"></i><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="ax s4"></i>
         </span>
         <h1 class="hero-headline" id="heroHeadline">
-          Real solutions, <em>assembled</em> from the right pieces.
+          Real solutions, <em>built</em> from the right pieces.
         </h1>
       </div>
 
@@ -63,11 +66,11 @@
   <!-- ============================ MARQUEE ============================ -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track" id="marquee">
-      <div class="item"><span class="txt">Artificial Intelligence</span><span class="sep"></span></div>
-      <div class="item"><span class="txt">Data Engineering</span><span class="sep"></span></div>
-      <div class="item"><span class="txt">Automation</span><span class="sep"></span></div>
-      <div class="item"><span class="txt">Home Labs</span><span class="sep"></span></div>
+      <div class="item"><span class="txt">AI &amp; Automation</span><span class="sep"></span></div>
+      <div class="item"><span class="txt">Data</span><span class="sep"></span></div>
+      <div class="item"><span class="txt">Software</span><span class="sep"></span></div>
       <div class="item"><span class="txt">Hardware</span><span class="sep"></span></div>
+      <div class="item"><span class="txt">Home Labs</span><span class="sep"></span></div>
       <div class="item"><span class="txt">Applied Intelligence</span><span class="sep"></span></div>
     </div>
   </div>
@@ -81,48 +84,48 @@
         <span class="title">What we build</span>
       </div>
 
-      <p class="sol-intro reveal" data-d="1">Small, sharp pieces, <em>assembled</em> into systems that actually ship.</p>
+      <p class="sol-intro reveal" data-d="1">Precise pieces, <em>composed</em> into systems that actually ship.</p>
 
       <div class="reveal" data-d="2">
         <div class="sol-row" tabindex="0">
           <span class="num">01</span>
           <div class="sol-main">
-            <div class="name">Artificial Intelligence</div>
-            <div class="desc">Models taken from research to reliable production: applied ML, LLM integration, computer vision, and the evaluation that keeps them honest.</div>
+            <div class="name">AI &amp; Automation</div>
+            <div class="desc">Intelligence and the workflows it powers: applied ML, LLM integration, computer vision, and agents that run reliably in the background so you don't have to.</div>
           </div>
-          <div class="tags"><span class="chip">Applied ML</span><span class="chip">LLMs</span><span class="chip">Vision</span></div>
+          <div class="tags"><span class="chip">Applied ML</span><span class="chip">LLMs</span><span class="chip">Agents</span><span class="chip">Vision</span></div>
         </div>
         <div class="sol-row" tabindex="0">
           <span class="num">02</span>
           <div class="sol-main">
             <div class="name">Data</div>
-            <div class="desc">Pipelines, modelling, and analytics that turn raw, messy inputs into something you can actually decide with.</div>
+            <div class="desc">Pipelines, modelling, and analytics that turn raw, messy inputs into something you can actually decide with. The foundation everything else runs on.</div>
           </div>
           <div class="tags"><span class="chip">Pipelines</span><span class="chip">Analytics</span><span class="chip">Modelling</span></div>
         </div>
         <div class="sol-row" tabindex="0">
           <span class="num">03</span>
           <div class="sol-main">
-            <div class="name">Automation</div>
-            <div class="desc">The repetitive work, engineered away: integrations, workflows, and agents that run quietly and reliably in the background.</div>
+            <div class="name">Software</div>
+            <div class="desc">Custom applications, APIs, and tooling built to last: from the interface to the infrastructure beneath it, engineered to be maintained and extended.</div>
           </div>
-          <div class="tags"><span class="chip">Workflows</span><span class="chip">Integrations</span><span class="chip">Agents</span></div>
+          <div class="tags"><span class="chip">Applications</span><span class="chip">APIs</span><span class="chip">Tooling</span></div>
         </div>
         <div class="sol-row" tabindex="0">
           <span class="num">04</span>
-          <div class="sol-main">
-            <div class="name">Home Labs</div>
-            <div class="desc">Self-hosted infrastructure done properly: media servers, private clouds, and networks that you own, end to end.</div>
-          </div>
-          <div class="tags"><span class="chip">Self-Hosted</span><span class="chip">Networking</span><span class="chip">Servers</span></div>
-        </div>
-        <div class="sol-row" tabindex="0">
-          <span class="num">05</span>
           <div class="sol-main">
             <div class="name">Hardware</div>
             <div class="desc">Where software meets the physical: edge devices, sensors, and the bridge between bits and the real world.</div>
           </div>
           <div class="tags"><span class="chip">Edge</span><span class="chip">Sensors</span><span class="chip">Prototyping</span></div>
+        </div>
+        <div class="sol-row" tabindex="0">
+          <span class="num">05</span>
+          <div class="sol-main">
+            <div class="name">Home Labs</div>
+            <div class="desc">Self-hosted infrastructure done properly: media servers, private clouds, and networks that you own, control, and trust end to end.</div>
+          </div>
+          <div class="tags"><span class="chip">Self-Hosted</span><span class="chip">Networking</span><span class="chip">Servers</span></div>
         </div>
       </div>
     </section>
@@ -150,7 +153,11 @@
         <span class="title">Let's build</span>
       </div>
       <div class="contact-grid">
-        <h2 class="contact-head reveal">Have something<br />worth <em>building?</em></h2>
+        <h2 class="contact-head reveal">Have something
+worth building?
+
+
+</h2>
         <div class="contact-links reveal" data-d="1">
           <a href="mailto:mosaicsystems5@gmail.com">
             <span class="n">01</span><span>mosaicsystems5@gmail.com</span><span class="h">↗</span>
@@ -167,7 +174,7 @@
       <div class="col">
         <span class="lab">Mosaic Systems</span>
         Real, tech-forward solutions.<br />
-        AI · Data · Automation · Home Labs · Hardware
+        AI &amp; Automation · Data · Software · Hardware · Home Labs
       </div>
       <div class="col">
         <span class="lab">Contact</span>
