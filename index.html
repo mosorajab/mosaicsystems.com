@@ -13,7 +13,28 @@
 </head>
 <body>
 
+<!-- ============================ INTRO ============================ -->
+<div class="intro" id="intro">
+  <div class="intro-inner">
+    <span class="mark build" id="introMark" aria-hidden="true"><i class="q1"></i><i class="q2"></i><i class="q3"></i><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="ax s4"></i></span>
+    <span class="intro-wm" id="introWm"><span class="n">Mosaic</span><span class="s">Systems</span></span>
+  </div>
+  <span class="intro-meta" id="introMeta">Technology Company · Est. 2025</span>
+</div>
+
+<!-- ============================ CUSTOM CURSOR ============================ -->
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
 <div class="scroll-progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============================ SECTION RAIL ============================ -->
+<nav class="section-rail" id="rail" aria-label="Section navigation">
+  <a href="#top" data-target="hero"><span class="rl-n">00</span><span class="rl-t">Top</span><span class="rl-tick"></span></a>
+  <a href="#solutions" data-target="solutions"><span class="rl-n">01</span><span class="rl-t">Solutions</span><span class="rl-tick"></span></a>
+  <a href="#approach" data-target="approach"><span class="rl-n">02</span><span class="rl-t">Approach</span><span class="rl-tick"></span></a>
+  <a href="#contact" data-target="contact"><span class="rl-n">03</span><span class="rl-t">Contact</span><span class="rl-tick"></span></a>
+</nav>
 
 <!-- ============================ NAV ============================ -->
 <nav class="nav" id="nav">
@@ -27,7 +48,7 @@
       <a href="#approach"><span class="n">02</span>Approach</a>
       <a href="#contact"><span class="n">03</span>Contact</a>
     </div>
-    <a class="nav-cta" href="#contact"><span>Start a project</span></a>
+    <a class="nav-cta" href="#contact" data-magnetic><span>Start a project</span></a>
   </div>
 </nav>
 
@@ -57,7 +78,7 @@
       </p>
 
       <div class="hero-actions" id="heroActions">
-        <a class="btn btn-primary" href="#contact"><span class="t">Start a project</span><span class="arr">↗</span></a>
+        <a class="btn btn-primary" href="#contact" data-magnetic><span class="t">Start a project</span><span class="arr">↗</span></a>
         <a class="btn btn-ghost" href="#solutions"><span class="t">See what we do</span></a>
       </div>
     </div>
@@ -88,6 +109,7 @@
 
       <div class="reveal" data-d="2">
         <div class="sol-row" tabindex="0">
+          <span class="sol-ghost" aria-hidden="true">01</span>
           <span class="num">01</span>
           <div class="sol-main">
             <div class="name">AI &amp; Automation</div>
@@ -96,6 +118,7 @@
           <div class="tags"><span class="chip">Applied ML</span><span class="chip">LLMs</span><span class="chip">Agents</span><span class="chip">Vision</span></div>
         </div>
         <div class="sol-row" tabindex="0">
+          <span class="sol-ghost" aria-hidden="true">02</span>
           <span class="num">02</span>
           <div class="sol-main">
             <div class="name">Data</div>
@@ -104,6 +127,7 @@
           <div class="tags"><span class="chip">Pipelines</span><span class="chip">Analytics</span><span class="chip">Modelling</span></div>
         </div>
         <div class="sol-row" tabindex="0">
+          <span class="sol-ghost" aria-hidden="true">03</span>
           <span class="num">03</span>
           <div class="sol-main">
             <div class="name">Software</div>
@@ -112,6 +136,7 @@
           <div class="tags"><span class="chip">Applications</span><span class="chip">APIs</span><span class="chip">Tooling</span></div>
         </div>
         <div class="sol-row" tabindex="0">
+          <span class="sol-ghost" aria-hidden="true">04</span>
           <span class="num">04</span>
           <div class="sol-main">
             <div class="name">Hardware</div>
@@ -120,6 +145,7 @@
           <div class="tags"><span class="chip">Edge</span><span class="chip">Sensors</span><span class="chip">Prototyping</span></div>
         </div>
         <div class="sol-row" tabindex="0">
+          <span class="sol-ghost" aria-hidden="true">05</span>
           <span class="num">05</span>
           <div class="sol-main">
             <div class="name">Home Labs</div>
@@ -137,7 +163,8 @@
           <span class="idx mono-label">02 / Approach</span>
           <div class="ap-title">Built <em>deliberately</em>, like a mosaic.</div>
         </div>
-        <div class="ap-steps">
+        <div class="ap-steps" id="apSteps">
+          <span class="ap-line" aria-hidden="true"></span>
           <div class="ap-step"><span class="bar"></span><div class="sn">01</div><div class="st">Understand</div><div class="sd">We start with the real problem, not the buzzword. What needs to be true when this works?</div></div>
           <div class="ap-step"><span class="bar"></span><div class="sn">02</div><div class="st">Assemble</div><div class="sd">The right pieces, chosen on merit: the simplest tools that solve it, nothing bolted on for show.</div></div>
           <div class="ap-step"><span class="bar"></span><div class="sn">03</div><div class="st">Ship</div><div class="sd">Into production, properly: tested, observable, and built to run without us hovering over it.</div></div>
@@ -153,13 +180,9 @@
         <span class="title">Let's build</span>
       </div>
       <div class="contact-grid">
-        <h2 class="contact-head reveal">Have something
-worth building?
-
-
-</h2>
+        <h2 class="contact-head reveal">Have something <em>worth&nbsp;building?</em></h2>
         <div class="contact-links reveal" data-d="1">
-          <a href="mailto:mosaicsystems5@gmail.com">
+          <a href="mailto:mosaicsystems5@gmail.com" data-magnetic>
             <span class="n">01</span><span>mosaicsystems5@gmail.com</span><span class="h">↗</span>
           </a>
         </div>
