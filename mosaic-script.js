@@ -129,31 +129,6 @@
     }
   }
 
-  /* ---- custom cursor (fine pointer only) ----------------------------- */
-  if (fine && !reduce) {
-    var dot = qs("#cursorDot"), ring = qs("#cursorRing");
-    if (dot && ring) {
-      document.body.classList.add("cursor-on");
-      var mx = window.innerWidth / 2, my = window.innerHeight / 2;
-      var rxp = mx, ryp = my;
-      window.addEventListener("mousemove", function (e) {
-        mx = e.clientX; my = e.clientY;
-        dot.style.transform = "translate(" + mx + "px," + my + "px)";
-      }, { passive: true });
-      (function ringLoop() {
-        rxp += (mx - rxp) * 0.2; ryp += (my - ryp) * 0.2;
-        ring.style.transform = "translate(" + rxp.toFixed(2) + "px," + ryp.toFixed(2) + "px)";
-        requestAnimationFrame(ringLoop);
-      })();
-      window.addEventListener("mousedown", function () { ring.classList.add("is-down"); });
-      window.addEventListener("mouseup", function () { ring.classList.remove("is-down"); });
-      qsa("a, button, [tabindex], .sol-row, .mark.hoverable, .marquee, .section-rail a").forEach(function (el) {
-        el.addEventListener("mouseenter", function () { ring.classList.add("is-hover"); dot.classList.add("is-hover"); });
-        el.addEventListener("mouseleave", function () { ring.classList.remove("is-hover"); dot.classList.remove("is-hover"); });
-      });
-      window.addEventListener("blur", function () { ring.classList.remove("is-hover"); dot.classList.remove("is-hover"); });
-    }
-  }
 
   /* ---- magnetic targets ---------------------------------------------- */
   if (fine && !reduce) {
